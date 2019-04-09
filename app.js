@@ -83,7 +83,7 @@ function displayVideo(data){
   console.log(data.items[0].snippet.title);
   console.log(data.items[0].snippet.description);
   console.log(data.items[0].snippet.thumbnails.default.url);
-  console.log(data.items[0].id.videoId);
+  console.log("https://www.youtube.com/watch?v="+data.items[0].id.videoId);
 }
 function getYoutubeVideo(query){
   const params = {
