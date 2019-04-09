@@ -4,10 +4,18 @@
 body{
     height: 100vh;
 }
+h1{
+    font-size: 3rem;
+    margin:1rem;
+}
+.logo{
+    width:100px;
+}
 .container{
     width: 80%;
     text-align: center;
     margin:0 auto;
+    min-width:320px;
 }
 #searchArea{
     display: flex;
@@ -28,6 +36,10 @@ body{
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    background-color: #c8e6f5;
+}
+#searchLyrics:hover{
+    background-color: #5ca0d3;
 }
 #songInfo{
     display: flex;
@@ -69,6 +81,7 @@ body{
 }
 .error{
     color:red;
+    font-size: 18px;
 }
 #lyrics_text{
     white-space: pre-wrap;
@@ -78,4 +91,20 @@ footer {
     margin-top: 20px;
     font-size: 18px;
     padding: 10px 0px;
+}
+@media all and (max-width:450px){
+    h1{
+        font-size: 2rem;
+    }
+    #songInfo{
+        flex-direction: column;
+    }
+    ul{
+        padding:0px;
+    }
+}
+@media all and (max-width:850px){
+    .container{
+        width: 100%;
+    }
 }

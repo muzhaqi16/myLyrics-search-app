@@ -82,8 +82,7 @@ function getSongInfo(track_list){
       `);
     });
   }else{
-    console.log('removing class');
-    $('.js-error-message').text('There were no matching results for your search query' );
+    $('.js-error-message').text('There were no matching results for your search query. Please check your spelling and try again' );
     $('.js-error-message').removeClass("hidden");
   }
 }
@@ -137,6 +136,7 @@ function handleSearch(){
         event.preventDefault();
         let queryText = $('#songSearch').val();
         $('#songInfo').empty();
+        $('.js-error-message').empty();
         searchForLyrics(queryText);
     });
 }
