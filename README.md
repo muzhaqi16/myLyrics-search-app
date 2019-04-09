@@ -1,101 +1,62 @@
-<!-- # book-thing.io
+<!-- # myLyrics-search-app-->
+# myLyrics-search-app
 
-Initial wireframes:
-
-https://wireframe.cc/x0a8I9
-
-https://wireframe.cc/6oVXTU -->
-# Book-Thing.IO
-
-A community driven, book recommendation application. Users can create lists of their favorite books and have others recommended to them.
+A lyrics app that you can search using the artist name, song title or parts of the songs lyrics and then it returins the artist and the same with a youtube link and full lyrics
 
 ## Motivation
 
-We wanted a book recommendation app that was community driven. Books and lists are all created by the users.
-
-## Build Status
-
-![Build Status](https://travis-ci.org/thinkful-c11/book-thing.io.svg?branch=master)
+I wanted an app that i could search for a songs name just by entering parts of the lyrics
 
 ## Screenshots
-Login Screen/Landing Page:
+Landing Page:
 
-![login screen](screenshots/login.png)
+![front page](front-page.png)
 
-About:
+Search:
 
-![about](screenshots/about.png)
+![search](search-result.png)
 
-Library:
+Lyrics:
 
-![library](screenshots/library.png)
+![lyrics](lyrics.png)
 
-Recommendations:
+## Running the app
 
-![recommendations](screenshots/recommendations.png)
-
-## Environment Setup
-
-1. Setup your own postgress server
-2. Run the database_script.sql file to build your table structure
-3. Create a .env file in your server folder which contains the path to your database as well as your client id and secret
-4. Obtain a client id and secret by setting up your app with [the google developers console](https://console.developers.google.com/)
-5. Run your project with
+To run all app, open
 ```
-npm run dev
+index.html
 ```
+To make a search request
+```
+Enter some songs lyrics
 
-## Running the tests
-
-To run all tests, run
+and press Search for Lyrics
 ```
-npm test
+To view lyrics
 ```
-To run just the front/back end tests, run
+Click on > View Lyrics Button
 ```
-npm run test:server
-
-npm run test:client
-```
-
 ## Built With
 
 ### Front-End
-* React
-* Redux
-* React-Router
-
-### Back-End
-* Postgress
-* Express
-* Node
-* Knex
-
-### Testing
-* Mocha
-* Chai
-* Chai-http
-* Jest
+* HTML
+* CSS
+* JavaScirpt
+* JQuery
 
 ## Features
 
-* Create a list of books
-* Add your favorite books
-* Like lists to get recommendations
-* See every book currently in the library
+* Search for a song by lyrics
+* View the lyrics of that song
+* Get a youtube video link for that song
+* Get a link to share the lyrics
 
 ## Demo
 
-- [Live Demo](https://book-thing.herokuapp.com/)
+- [Live Demo](https://muzhaqi16.github.io/myLyrics-search-app/)
 
 ## Authors
 
-* **Sonja Duric** - ** - Database design/Back-End development
-* **Jonathan Fitzgibbon** - ** - Back-End development/testing
-* **Tanner Gill** - ** - Front-End development/testing, styling
-* **Patrice White** - ** - Front-End development/testing, styling
+* **Artan Muzhaqi** - ** - Front-End development/testing, styling
 
-## Acknowledgments
-
-* **Ben Pardo** - ** - The Great Savior, The Wise Sage
 
