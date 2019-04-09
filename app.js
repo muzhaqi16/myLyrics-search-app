@@ -69,17 +69,23 @@ function getLyrics(trackId){
     });
 }
 function getSongInfo(track_list){
-  track_list.forEach(trackObj=>{
-    $('#songInfo').append(`
-    <li class="music-info">
-      <h2 class="artist_name">${trackObj.track.artist_name}</h2>
-      <p class="track_name">${trackObj.track.track_name}</p>
-      <p class="track_id hidden">${trackObj.track.track_id}</p>
-      <p class="track_share_url hidden">${trackObj.track.track_share_url}</p>
-      <button class="getVideoButton"> > View Lyrics</button>
-    </li>
-    `);
-  });
+  if(track_list.length>0){
+    track_list.forEach(trackObj=>{
+      $('#songInfo').append(`
+      <li class="music-info">
+        <h2 class="artist_name">${trackObj.track.artist_name}</h2>
+        <p class="track_name">${trackObj.track.track_name}</p>
+        <p class="track_id hidden">${trackObj.track.track_id}</p>
+        <p class="track_share_url hidden">${trackObj.track.track_share_url}</p>
+        <button class="getVideoButton"> > View Lyrics</button>
+      </li>
+      `);
+    });
+  }else{
+    console.log('removing class');
+    $('.js-error-message').text('There were no matching results for your search query' );
+    $('.js-error-message').removeClass("hidden");
+  }
 }
 function displayVideo(data,id,url){
   $('#songInfo').empty();

@@ -67,6 +67,9 @@ body{
 .hidden{
     display: none;
 }
+.error{
+    color:red;
+}
 #lyrics_text{
     white-space: pre-wrap;
 }
