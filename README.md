@@ -1,5 +1,5 @@
 <!-- # myLyrics-search-app-->
-# myLyrics-search-app
+# (logo.png) myLyrics-search-app
 
 A lyrics app that you can search using the artist name, song title or parts of the songs lyrics and then it returins the artist and the same with a youtube link and full lyrics
 
@@ -22,7 +22,7 @@ Lyrics:
 
 ## Running the app
 
-To run all app, open
+To run the app, open
 ```
 index.html
 ```
