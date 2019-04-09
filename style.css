@@ -1,0 +1,17 @@
+body{
+   
+}
+.container{
+    width: 80%;
+    text-align: center;
+    margin:0 auto;
+}
+#searchLyrics{
+    margin-top: 10px;
+}
+#songInfo li{
+    list-style: none;
+}
+.music-info{
+    display: inline-block;
+}
