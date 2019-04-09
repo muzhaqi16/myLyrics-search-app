@@ -7,6 +7,10 @@ A lyrics app that you can search using the artist name, song title or parts of t
 
 I wanted an app that i could search for a songs name just by entering parts of the lyrics
 
+## Demo
+
+- [Live Demo](https://muzhaqi16.github.io/myLyrics-search-app/)
+
 ## Screenshots
 Landing Page:
 
@@ -50,10 +54,6 @@ Click on > View Lyrics Button
 * View the lyrics of that song
 * Get a youtube video link for that song
 * Get a link to share the lyrics
-
-## Demo
-
-- [Live Demo](https://muzhaqi16.github.io/myLyrics-search-app/)
 
 ## Authors
 

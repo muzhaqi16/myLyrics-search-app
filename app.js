@@ -86,7 +86,7 @@ function getSongInfo(track_list){
     $('.js-error-message').removeClass("hidden");
   }
 }
-function displayVideo(data,id,url){
+function displayLyrics(data,id,url){
   $('#songInfo').empty();
   $('#songInfo').append(`<li class="lyrics-info">
     <h2>${data.items[0].snippet.title}</h2>
@@ -115,7 +115,7 @@ function getYoutubeVideo(query,id,url){
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => displayVideo(responseJson,id,url))
+    .then(responseJson => displayLyrics(responseJson,id,url))
     .catch(err => {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });
@@ -146,4 +146,5 @@ function handleClicks(){
   handleGetLyrics();
   handleGetYoutubeVideo();
 }
+
 $(handleClicks);
