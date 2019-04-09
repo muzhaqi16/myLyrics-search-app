@@ -12,12 +12,11 @@
     <div class="container">
         <header>
             <h1>Get The Lyrics From Your Favorite Artists</h1>
-            <h2>Open your console log to view some of the results: <code>View > Developer > JavaScript Console</code></h2>
         </header>
           
         <main>
             <form id="searchArea">
-                <input id="songSearch" placeholder="Type an artist name, song title or song text" size="100" />
+                <input id="songSearch" placeholder="Type an artist name, song title or song text" size="100" required/>
                 <button id="searchLyrics">Search for Lyrics!</button>	
             </form>
             <div id="lyrics">
@@ -26,6 +25,9 @@
                 </ul>
             </div>
         </main>
+        <footer>
+            <p>Created by <a href="https://muzhaqi.com/">Artan Muzhaqi</a> using <a href="https://www.musixmatch.com/">Musixmatch's</a> &amp; <a href="https://www.youtube.com">YouTube's </a>API</p>
+        </footer>
     <script src="app.js"></script>
 </body>
 </html>

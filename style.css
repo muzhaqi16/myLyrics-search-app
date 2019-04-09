@@ -1,17 +1,78 @@
+*{
+    box-sizing: border-box;
+}
 body{
-   
+    height: 100vh;
 }
 .container{
     width: 80%;
     text-align: center;
     margin:0 auto;
 }
+#searchArea{
+    display: flex;
+    flex-direction: column;
+}
+#songSearch{
+   padding: 10px;
+   border-top:none;
+   border-left:none;
+   border-right:none;
+   font-size:24px;
+}
 #searchLyrics{
     margin-top: 10px;
+    padding: 10px;
+    font-size:24px;
+    align-self: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#songInfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 #songInfo li{
     list-style: none;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.41);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    margin:10px auto;
+    display: flex;
+    padding:10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.music-info{
+    min-width:250px;
+    width:300px;
+    min-height: 200px;
+}
+#songInfo li button{
+    font-size:18px;
+    border:none;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 100%;
 }
 .music-info{
     display: inline-block;
+}
+.hidden{
+    display: none;
+}
+#lyrics_text{
+    white-space: pre-wrap;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 0px;
 }

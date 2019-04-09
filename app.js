@@ -22,7 +22,8 @@ function searchForLyrics(query){
         apikey: musixMatchApiKey,
         s_track_rating:'desc',
         format:"json",
-        f_has_lyrics:true
+        f_has_lyrics:true,
+        page_size:9,
       };
     
       const queryString = formatQueryParams(params);
@@ -60,50 +61,56 @@ function getLyrics(trackId){
       }
       throw new Error(response);
     })
-    .then(responseJson => console.log(responseJson.message.body.lyrics.lyrics_body))
+    .then(responseJson => {
+      $('#lyrics_text').text(responseJson.message.body.lyrics.lyrics_body)
+    })
     .catch(err => {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });
 }
 function getSongInfo(track_list){
-  console.log(track_list);
   track_list.forEach(trackObj=>{
     $('#songInfo').append(`
     <li class="music-info">
       <h2 class="artist_name">${trackObj.track.artist_name}</h2>
       <p class="track_name">${trackObj.track.track_name}</p>
-      <p class="track_id">${trackObj.track.track_id}</p>
-      <button class="getLyricsButton">Get Lyrics</button>
-      <button class="getVideoButton">Get Youtube Video</button>
+      <p class="track_id hidden">${trackObj.track.track_id}</p>
+      <p class="track_share_url hidden">${trackObj.track.track_share_url}</p>
+      <button class="getVideoButton"> > View Lyrics</button>
     </li>
     `);
   });
 }
-function displayVideo(data){
-  console.log(data.items[0].snippet.title);
-  console.log(data.items[0].snippet.description);
-  console.log(data.items[0].snippet.thumbnails.default.url);
-  console.log("https://www.youtube.com/watch?v="+data.items[0].id.videoId);
+function displayVideo(data,id,url){
+  $('#songInfo').empty();
+  $('#songInfo').append(`<li class="lyrics-info">
+    <h2>${data.items[0].snippet.title}</h2>
+    <a href="http://www.youtube.com/watch?v=${data.items[0].id.videoId}&amp;feature=player_embedded" target="_blank"><img src="${data.items[0].snippet.thumbnails.high.url}" alt="${data.items[0].snippet.title}"/><br/>Watch on YouTube</a>
+    <p id="lyrics_text"></p>
+    <a href="${url}" target="_blank">See Full Lyrics</a></li>
+  `);
+  getLyrics(id);
 }
-function getYoutubeVideo(query){
+function getYoutubeVideo(query,id,url){
   const params = {
     key: youtubeApiKey,
     q: query,
     part: 'snippet',
     maxResults:1,
-    type: 'video'
+    type: 'video',
+    videoEmbeddable:"true"
   };
   const queryString = formatQueryParams(params)
-  const url = youtubeSearchURL + '?' + queryString;
+  const queryUrl = youtubeSearchURL + '?' + queryString;
 
-  fetch(url)
+  fetch(queryUrl)
     .then(response => {
       if (response.ok) {
         return response.json();
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => displayVideo(responseJson))
+    .then(responseJson => displayVideo(responseJson,id,url))
     .catch(err => {
       $('#js-error-message').text(`Something went wrong: ${err.message}`);
     });
@@ -111,7 +118,7 @@ function getYoutubeVideo(query){
 }
 function handleGetYoutubeVideo(){
   $('#songInfo').on('click','.getVideoButton',function(){
-    getYoutubeVideo($(this).siblings('.artist_name').text() + " " + $(this).siblings('.track_name').text());
+    getYoutubeVideo($(this).siblings('.artist_name').text() + " " + $(this).siblings('.track_name').text(),$(this).siblings('.track_id').text(),$(this).siblings('.track_share_url').text());
   });
 }
 function handleGetLyrics(){
