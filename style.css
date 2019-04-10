@@ -5,17 +5,17 @@ body{
     height: 100vh;
 }
 h1{
-    font-size: 3rem;
+    font-size: 2rem;
     margin:1rem;
 }
 ul{
     padding:0px;
 }
 .logo{
-    width:100px;
+    width:70px;
 }
 .container{
-    width: 80%;
+    width: 100%;
     text-align: center;
     margin:0 auto;
     min-width:320px;
@@ -52,7 +52,7 @@ ul{
 }
 #songInfo{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -94,7 +94,7 @@ ul{
 }
 .lyrics-info{
     width:100%;
-    font-size: 22px;
+    font-size: 18px;
 }
 .yt-player{  
     position:relative;
@@ -107,8 +107,8 @@ ul{
 .yt-player embed {
     position:absolute;
     top:0;
-    left: 15%;
-    width:70%;
+    left:0;
+    width:100%;
     height:100%;
 }
 #lyrics_text{
@@ -120,29 +120,15 @@ footer {
     font-size: 20px;
     padding: 10px 0px;
 }
-@media all and (max-width:450px){
+@media all and (min-width:450px){
     h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    .container{
+        width: 90%;
     }
     #songInfo{
-        flex-direction: column;
-    }
-    .lyrics-info{
-        font-size: 18px;
-    }
-    .yt-player{
-        padding-bottom:46.25%;
-    }
-    .yt-player iframe,
-    .yt-player object,
-    .yt-player embed {
-        width:100%;
-        left:0;
-    }
-}
-@media all and (max-width:850px){
-    .container{
-        width: 100%;
+        flex-direction: row;
     }
     .lyrics-info{
         font-size: 20px;
@@ -155,5 +141,25 @@ footer {
     .yt-player embed {
         width:90%;
         left:5%;
+    }
+}
+@media all and (min-width:850px){
+    h1{
+        font-size: 3rem;
+    }
+    .container{
+        width: 90%;
+    }
+    .lyrics-info{
+        font-size: 22px;
+    }
+    .yt-player{
+        padding-bottom:36.25%;
+    }
+    .yt-player iframe,
+    .yt-player object,
+    .yt-player embed {
+        width:70%;
+        left: 15%;
     }
 }
