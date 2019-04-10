@@ -83,6 +83,7 @@ function getSongInfo(track_list){
       `);
     });
   }else{
+    $('#songInfo').empty();
     $('.js-error-message').text('There were no matching results for your search query. Please check your spelling and try again' );
     $('.js-error-message').removeClass("hidden");
   }
