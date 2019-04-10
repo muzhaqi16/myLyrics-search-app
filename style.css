@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 body{
+    font-family: 'Open Sans', sans-serif;
     height: 100vh;
 }
 h1{
@@ -119,6 +120,13 @@ footer {
     margin-top: 20px;
     font-size: 20px;
     padding: 10px 0px;
+}
+footer a,.lyrics-info a{
+    text-decoration: none;
+    color:#E20AFF;
+}
+footer a:hover,.lyrics-info a:hover{
+    color:#AF1DFF;
 }
 @media all and (min-width:450px){
     h1{
