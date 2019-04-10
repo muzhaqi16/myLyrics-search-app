@@ -70,6 +70,7 @@ function getLyrics(trackId){
 }
 function getSongInfo(track_list){
   if(track_list.length>0){
+    $('#songInfo').empty();
     track_list.forEach(trackObj=>{
       $('#songInfo').append(`
       <li class="music-info">
@@ -136,8 +137,9 @@ function handleGetLyrics(){
 function handleSearch(){
     $('#searchArea').on('submit',event=>{
         event.preventDefault();
-        let queryText = $('#songSearch').val();
         $('#songInfo').empty();
+        $('#songInfo').append(`<img src="spinner.gif" id="spinner" alt="loading"/>`);
+        let queryText = $('#songSearch').val();
         $('.js-error-message').empty();
         searchForLyrics(queryText);
     });

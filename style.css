@@ -44,6 +44,11 @@ ul{
 #searchLyrics:hover{
     background-color: #5ca0d3;
 }
+#spinner{
+    background: transparent;
+    width:50px;
+    margin: 0 auto;
+}
 #songInfo{
     display: flex;
     flex-direction: row;
