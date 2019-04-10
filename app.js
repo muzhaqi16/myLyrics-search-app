@@ -93,7 +93,7 @@ function displayLyrics(data,id,url){
     <h2>${data.items[0].snippet.title}</h2>
     <div class="yt-player">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/${data.items[0].id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div>
+    </div>
     <p id="lyrics_text"></p>
     <a href="${url}" target="_blank">See Full Lyrics</a></li>
   `);

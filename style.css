@@ -94,7 +94,22 @@ ul{
 }
 .lyrics-info{
     width:100%;
-    font-size: 18px;
+    font-size: 22px;
+}
+.yt-player{  
+    position:relative;
+    padding-bottom:36.25%;
+    padding-top:30px;
+    overflow:hidden;
+}
+.yt-player iframe,
+.yt-player object,
+.yt-player embed {
+    position:absolute;
+    top:0;
+    left: 15%;
+    width:70%;
+    height:100%;
 }
 #lyrics_text{
     white-space: pre-wrap;
@@ -112,9 +127,33 @@ footer {
     #songInfo{
         flex-direction: column;
     }
+    .lyrics-info{
+        font-size: 18px;
+    }
+    .yt-player{
+        padding-bottom:46.25%;
+    }
+    .yt-player iframe,
+    .yt-player object,
+    .yt-player embed {
+        width:100%;
+        left:0;
+    }
 }
 @media all and (max-width:850px){
     .container{
         width: 100%;
+    }
+    .lyrics-info{
+        font-size: 20px;
+    }
+    .yt-player{
+        padding-bottom:46.25%;
+    }
+    .yt-player iframe,
+    .yt-player object,
+    .yt-player embed {
+        width:90%;
+        left:5%;
     }
 }
