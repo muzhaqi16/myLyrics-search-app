@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Lyrics Finder</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
-            <a href="index.html" aria-label="Go to Homepage"><img src="logo.png" alt="logo" class="logo"></a>
+            <a href="index.html" aria-label="Go to Homepage"><img src="./assets/img/logo.png" alt="logo"
+                    class="logo"></a>
             <h1>Get The Lyrics From Your Favorite Artists</h1>
         </header>
-          
+
         <main>
             <form id="searchArea">
-                <input id="songSearch" placeholder="Type an artist name, song title or song text" size="100" required aria-label="Enter the artist name, songs title or some lyrics text"/>
-                <button id="searchLyrics">Search for Lyrics!</button>	
+                <input id="songSearch" placeholder="Type an artist name, song title or song text" size="100" required
+                    aria-label="Enter the artist name, songs title or some lyrics text" />
+                <button id="searchLyrics">Search for Lyrics!</button>
             </form>
             <div id="lyrics">
                 <p class="js-error-message hidden error"></p>
                 <ul id="songInfo">
-                    
+
                 </ul>
             </div>
         </main>
         <footer>
-            <p>Created by <a href="https://muzhaqi.com/">Artan Muzhaqi</a> using <a href="https://www.musixmatch.com/">Musixmatch's</a> &amp; <a href="https://www.youtube.com">YouTube's </a>API</p>
+            <p>Created by <a href="https://muzhaqi.com/">Artan Muzhaqi</a> using <a
+                    href="https://www.musixmatch.com/">Musixmatch's</a> &amp; <a
+                    href="https://www.youtube.com">YouTube's </a>API</p>
         </footer>
-    <script src="app.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138168176-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <script src="app.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138168176-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-138168176-1');
-    </script>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-138168176-1');
+        </script>
 
 </body>
+
 </html>

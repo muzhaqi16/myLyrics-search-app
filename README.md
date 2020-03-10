@@ -14,15 +14,15 @@ I wanted an app that i could search for a songs name just by entering parts of t
 ## Screenshots
 Landing Page:
 
-![front page](front-page.png)
+![front page](./assets/img/front-page.png)
 
 Search:
 
-![search](search-result.png)
+![search](./assets/img/search-result.png)
 
 Lyrics:
 
-![lyrics](lyrics.png)
+![lyrics](./assets/img/lyrics.png)
 
 ## Running the app
 
